@@ -11,27 +11,27 @@ const backgroundImages = [
 ];
 const Herosection = () => {
   return (
-    <div className="relative h-[80svh] max-w-full overflow-x-hidden">
+    <div className="relative h-80 md:h-[80svh] max-w-full overflow-x-hidden">
       {/* Swiper Background */}
       <Swiper
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         effect="fade"
         loop
-        className="absolute inset-0 h-full w-full z-10"
+        className="absolute inset-0 h-50 md:h-full w-full z-10"
       >
         {backgroundImages.map((img, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="h-full w-full bg-con md:bg-cover md:bg-center"
+              className="h-full w-full bg-contain bg-no-repeat bg-center md:bg-cover md:bg-center"
               style={{ backgroundImage: `url(${img})` }}
             ></div>
           </SwiperSlide>
         ))}
       </Swiper>
       <div className="absolute inset-0 bg-black/50 z-1"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-10 min-w-2xl">
-        <h1 className="text-white md:text-5xl">
+      <div className="absolute top-50 left-45 -translate-x-1/2 md:top-1/2 md:left-1/2 md:-translate-x-1/2 z-10 max-w-xs md:min-w-2xl">
+        <h1 className="text-white text-2xl font-bold md:text-5xl w-2xs md:w-full line-clamp-4">
           Bridging the Gap in Advanced Medical HealthCare
         </h1>
       </div>
